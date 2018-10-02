@@ -1,0 +1,56 @@
+/*
+* HOMEPAGE
+*/
+
+.colibri-wrapper {
+    position: absolute;
+    top: 50px;
+    right: $su;
+    z-index: -1;
+    width: 100%;
+}
+
+.colibri-img {
+    position:absolute;
+    right:0;
+    width: 40%;
+    width: 40vw;
+    min-width:160px;
+}
+
+@keyframes anim-colibri {
+    from {
+        transform:translateY(0);
+    }
+    to {
+        transform:translateY(90px);
+    }
+}
+
+#animated-colibri {
+    animation-name:anim-colibri;
+    animation-duration: 1500ms;
+    animation-delay: 750ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.77,0,.18,1);
+}
+
+.homepage-header {
+    margin-top:$su*4;
+}
+
+.homepage-content {
+    margin-top:$su*8;
+}
+
+.gray-block {
+    display:block;
+    width:100%;
+    background-color:$light-gray;
+
+    &:after {
+        content: "";
+        display: block;
+        padding-bottom: 50%;
+    }
+}

@@ -1,0 +1,5 @@
+{{ $main := resources.Get "js/main.js" }}
+{{ $test := resources.Get "js/test.js" }}
+{{ $defaultJS := slice $test $main | resources.Concat "js/global.js" }}
+{{ $globalJS := $defaultJS | resources.Minify | resources.Fingerprint }}
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}"></script>

@@ -1,0 +1,20 @@
+$dark-blue : #281168;
+$light-blue : #9AE2F6;
+$pink : #fd576a;
+$green: #1dfc2f;
+$light-gray:#f3f4f3;
+
+$su: 20px; // spacing-unit
+
+$mw: 1180px; // max-width
+
+@import 'partials/_fonts';
+@import 'partials/_reset';
+@import 'partials/_mixins';
+@import 'partials/_base';
+@import 'partials/_typo';
+@import 'partials/_modules';
+@import 'partials/_content';
+@import 'partials/_home';
+@import 'partials/_header';
+@import 'partials/_footer';
