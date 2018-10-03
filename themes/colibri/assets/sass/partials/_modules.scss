@@ -21,10 +21,10 @@
 
 .section-block {
     width:100%;
-    margin-top:$su;
+    margin-top:$su*2;
 
     @media (min-width:768px) {
-        width:calc(50% - #{$su * 2});
+        width:calc(50% - #{$su * 3});
     }
 }
 
