@@ -1,4 +1,5 @@
-baseURL = "https://studiocolibri.be/"
+# baseURL = "https://studiocolibri.be/"
+baseURL = "https://confident-leavitt-c2e150.netlify.com/"
 languageCode = "fr-be"
 title = "Studio Colibri"
 theme = "colibri"
