@@ -25,17 +25,17 @@
 
 @keyframes anim-colibri {
     from {
-        transform:translateY(0);
+        transform:translate(0);
     }
     to {
-        transform:translateY(90px);
+        transform:translate(-50px, -120px);
     }
 }
 
 #animated-colibri {
     animation-name:anim-colibri;
     animation-duration: 1500ms;
-    animation-delay: 750ms;
+    animation-delay: 500ms;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.77,0,.18,1);
 }
