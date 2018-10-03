@@ -1,4 +1,4 @@
-baseURL = "https://studiocolibri.be/"
+baseURL = "https://www.studiocolibri.be/"
 languageCode = "fr-be"
 title = "Studio Colibri"
 theme = "colibri"
