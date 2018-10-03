@@ -1,5 +1,7 @@
+# caching
 <filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$"> Header set Cache-Control "max-age=2628000, public" </filesMatch>
 
+# period of caching
 <IfModule mod_expires.c>
   ExpiresActive On
 
@@ -24,6 +26,11 @@
   ExpiresByType application/pdf "access plus 1 month"
   ExpiresByType application/x-shockwave-flash "access plus 1 month"
 </IfModule>
+
+# Gzip
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+</ifmodule>
 
 ErrorDocument 404 /404.html
 
