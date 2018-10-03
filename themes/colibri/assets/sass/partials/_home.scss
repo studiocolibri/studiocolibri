@@ -11,11 +11,16 @@
 }
 
 .colibri-img {
-    position:absolute;
-    right:0;
+    position: absolute;
+    right: -9vw;
     width: 40%;
-    width: 40vw;
-    min-width:160px;
+    width: 65vw;
+    min-width: 160px;
+    top: -7vw;
+
+    @media (min-width:768px) {
+        top:-14vw;
+    }
 }
 
 @keyframes anim-colibri {
@@ -37,6 +42,22 @@
 
 .homepage-header {
     margin-top:$su*4;
+}
+
+.homepage-intro {
+    max-width:80vw;
+
+    @media (min-width:400px) {
+        max-width:60vw;
+    }
+
+    @media (min-width:580px) {
+        max-width:50vw;
+    }
+
+    @media (min-width:768px) {
+        max-width:50%;
+    }
 }
 
 .homepage-content {
