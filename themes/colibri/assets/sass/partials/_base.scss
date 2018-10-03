@@ -2,12 +2,16 @@
 * BASE
 */
 
-body {
+html, body {
     @include ff-l;
-    font-size:62,5%;
+    font-size:14px;
     position:relative;
-}
 
-.page-wrapper {
-    
+    @media (min-width:400px) {
+        font-size:16px;
+    }
+
+    @media (min-width:768px) {
+        font-size:18px;
+    }
 }
