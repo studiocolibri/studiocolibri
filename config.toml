@@ -3,6 +3,8 @@ languageCode = "fr-be"
 title = "Studio Colibri"
 theme = "colibri"
 
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
 [params]
   #body_classes = "test"
   test = "Hello"
