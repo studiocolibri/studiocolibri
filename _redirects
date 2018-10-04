@@ -1,2 +1,3 @@
 # Redirect default Netlify subdomain to primary domain
-http://confident-leavitt-c2e150.netlify.com/* http://studiocolibri.be/:splat 301!
+http://confident-leavitt-c2e150.netlify.com/* http://www.studiocolibri.be/:splat 301!
+http://studiocolibri.be/* https://www.studiocolibri.be/:splat 301!
