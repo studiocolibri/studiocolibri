@@ -3,3 +3,7 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "application/font-woff2"
+    
+[build]
+publish = "public"
+command = "hugo"
