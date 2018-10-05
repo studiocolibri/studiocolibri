@@ -1,3 +1,3 @@
 # Hi there !
 
-This a custom theme for studio colibri agency 
+This is a custom theme for studio colibri web agency.
