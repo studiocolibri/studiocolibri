@@ -10,6 +10,9 @@ Thumbs.db
 .idea/
 nbproject/
 
+# hugo public
+/public
+
 # Vagrant
 .vagrant/
 
