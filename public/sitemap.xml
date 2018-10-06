@@ -3,7 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://studiocolibri.be/</loc>
+    <loc>https://www.studiocolibri.be/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.studiocolibri.be/</loc>
     <priority>0</priority>
   </url>
   
