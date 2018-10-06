@@ -21,9 +21,8 @@
     {{ $style := resources.Get "sass/main.scss" | toCSS | postCSS | minify | fingerprint }} 
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 
-    {{ block "favicon" . }}
-      {{ partial "site-favicon.html" . }}
-    {{ end }}
+    
+    {{ partial "site-favicon.html" . }}
 
     {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
     {{- template "_internal/opengraph.html" . -}}
