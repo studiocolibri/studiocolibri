@@ -37,7 +37,8 @@
 <meta itemprop="name" content="404 Page not found">
 <meta itemprop="description" content="">
 
-</head>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
 
   <body>
     
@@ -73,6 +74,17 @@
 
 
 <script src="https://www.studiocolibri.be/js/global.min.6365b2129a506a2da99e06f35362616f9b0b6418ba4813467ce16129e589000a.js"></script>
+<script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 
   </body>
 </html>
