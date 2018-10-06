@@ -33,18 +33,6 @@
   </head>
 
   <body>
-    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main role="main">
-        <article class="page-wrapper">
-            <header class="page-header">
-              <div class="block-mw">
-                <h1>Connexion à l'admin</h1>>
-              </div>
-            </header>
-        </article>
-    </main>
-    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
-    {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
     <script>
         if (window.netlifyIdentity) {
           window.netlifyIdentity.on("init", user => {
