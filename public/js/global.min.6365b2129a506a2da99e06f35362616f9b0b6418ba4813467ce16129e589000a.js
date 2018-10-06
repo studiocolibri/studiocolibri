@@ -1,1 +1,0 @@
-console.log('test.js loaded');console.log('main.js loaded');
