@@ -19,7 +19,7 @@
     {{ end }}
     
     {{ $style := resources.Get "sass/main.scss" | toCSS | postCSS | minify | fingerprint }} 
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 
     {{ block "favicon" . }}
       {{ partial "site-favicon.html" . }}
