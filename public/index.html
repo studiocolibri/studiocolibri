@@ -17,7 +17,7 @@
     
     
      
-    <link rel="stylesheet" href="/sass/main.min.06c3d72506b0e408acc8aed4e6b2d035689b7f697553d143e6abf3de765281e0.css">
+    <link rel="stylesheet" href="/sass/main.min.4d46861d3f30cf617a6d8b2293a33a6a2f8a2493182e74eebe7e40dee1db8278.css">
 
     
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -37,7 +37,8 @@
 <meta itemprop="name" content="Studio Colibri">
 <meta itemprop="description" content="">
 
-</head>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
 
   <body>
     
@@ -65,7 +66,7 @@
     </header>
     <section class="page-content homepage-content">
         <div class="block-mw">
-          <h1 class="section-title">L'approhugohe «&nbsp;Colibri&nbsp;»</h1>
+          <h1 class="section-title">L'approche «&nbsp;Colibri&nbsp;»</h1>
           <div class="section-blocks">
             <div class="section-block">
               <h2 class="section-subtitle">Une philosophie "low-end"</h2>
@@ -124,6 +125,17 @@
 
 
 <script src="https://www.studiocolibri.be/js/global.min.6365b2129a506a2da99e06f35362616f9b0b6418ba4813467ce16129e589000a.js"></script>
+<script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 
   </body>
 </html>
