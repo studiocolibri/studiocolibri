@@ -3,7 +3,7 @@
 */
 
 html, body {
-    @include ff-l;
+    font-family: "Helvetica", "Arial", sans-serif;
     font-size:14px;
     position:relative;
     color:$text-color;
