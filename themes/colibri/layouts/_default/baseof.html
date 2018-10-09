@@ -8,15 +8,11 @@
     <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
+    <META NAME="Title" CONTENT="Studio Colibri | L'Agence Web Durable">
+      <META NAME="Description" CONTENT="Construire un web plus rapide, plus sécurisé et plus écologique grâce une alliance de technologies modernes et une approche plus élémentaire du web. ">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    {{ .Hugo.Generator }}
-    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    {{ else }}
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    {{ end }}
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
     
     {{ $style := resources.Get "sass/main.scss" | toCSS | postCSS | minify | fingerprint }} 
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
