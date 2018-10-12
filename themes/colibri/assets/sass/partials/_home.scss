@@ -61,7 +61,11 @@
 }
 
 .homepage-content {
-    margin-top:$su*8;
+    margin-top:$su*5;
+
+    @media (min-width:768px) {
+        margin-top:$su*10;
+    }
 }
 
 .gray-block {
@@ -74,4 +78,47 @@
         display: block;
         padding-bottom: 50%;
     }
+}
+
+.section--us {
+    background: linear-gradient(to bottom, #{$ultra-light-gray} 0%,#ffffff 100%);
+
+    &__img {
+        display:block;
+        position:relative;
+
+        @media (min-width:400px) {
+            top:-$su*2;
+        }
+
+        @media (min-width:768px) {
+            top:-$su*5;
+        }
+
+        img {
+            width:100%;
+        }
+    }
+
+    .section-title {
+        margin-top:$su*3.5;
+    }
+
+    .section-block {
+        margin-top:0;
+    }
+
+    &__txt {
+        margin-top:$su*2;
+    }
+}
+
+.topnametag {
+    border: 1px solid $light-blue;
+    @include ff-r;
+    display: inline-block;
+    padding:0.1em 0.6em;
+    font-size:0.75rem;
+    margin-bottom:$su/2;
+    color:$light-blue;
 }
