@@ -2,7 +2,4 @@
 {{ $test := resources.Get "js/test.js" }}
 {{ $defaultJS := slice $test $main | resources.Concat "js/global.js" }}
 {{ $globalJS := $defaultJS | resources.Minify | resources.Fingerprint }}
-<script src="{{ $globalJS.Permalink }}"></script>
-<script>
-  window.netlifyIdentity&&window.netlifyIdentity.on("init",a=>{a||window.netlifyIdentity.on("login",()=>{document.location.href="/admin/"})});
-</script>
+<!-- <script src="{{ $globalJS.Permalink }}"></script> -->
