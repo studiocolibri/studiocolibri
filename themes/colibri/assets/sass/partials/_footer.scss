@@ -3,40 +3,54 @@
 */
 
 .site-footer {
-    @include max-width;
-    margin-top:$su*4;
+    margin-top:$su*7    ;
     padding-top:$su*2;
     padding-bottom:$su*2;
+    background-color:$dark-blue;
+    color:white;
+    @include ff-r;
 
-    @media (min-width:768px) {
-        margin-top:$su*13;
-        
+    .section-blocks {
+        margin-top:100px;
     }
 
-    a {
-        color:$dark-blue;
-        transition:150ms color ease-out;
-        text-decoration: none;
+    .section-blocks--no-margin-top {
+        margin-top:0;
+
+        .section-block {
+            margin-top:0;
+        }
+    } 
+
+    h1 {
+        color:white;
+    }
+
+    &__action {
+
+        a {
+            float:right;
+        }
+    }
+
+    &__credits {
+        margin-top:$su*5;
+        padding-top:$su*1.5;
+        border-top:1px solid #594490;
+        font-size:1.2rem;
+
+        .section-block {
+            width:auto;
+        }
+    }
+
+    .span-block {
         display:inline-block;
-        position:relative;
+        margin-left:1.5em;
+    }
 
-        &:hover {
-            color:$pink;
-
-            &:after {
-                background:$pink;
-            }
-        }
-
-        &:after {
-            content:"";
-            display:block;
-            height:2px;
-            background:$dark-blue;
-            position: absolute;
-            width: 100%;
-            top: 1.35em;
-            transition:150ms background-color ease-out;
-        }
+    .text-link {
+        color:white;
+        border-bottom:1px solid white;
     }
 }
