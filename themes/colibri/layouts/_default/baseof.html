@@ -4,16 +4,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
+   <!--    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>-->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <META NAME="Title" CONTENT="Studio Colibri | L'Agence Web Durable">
-      <META NAME="Description" CONTENT="Construire un web plus rapide, plus sécurisé et plus écologique grâce une alliance de technologies modernes et une approche plus élémentaire du web. ">
+	<title>Studio Colibri | L'Agence Web Durable</title>
+    <meta name="description" content='Utiliser des technologies modernes pour construire un web plus rapide, plus sécurisé et plus écologique.'>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Studio Colibri | L'Agence Web Durable">
+    <meta property="og:image" content="/opengraph/graphcolibri.jpg">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:description" content='Utiliser des technologies modernes pour construire un web plus rapide, plus sécurisé et plus écologique.'>
+    <meta property="og:site_name" content="Studio Colibri">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    
+    <meta name="robots" content="index, follow">
     {{ $style := resources.Get "sass/main.scss" | toCSS | postCSS | minify | fingerprint }} 
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 
