@@ -10,7 +10,6 @@ $su: 20px; // spacing-unit
 
 $mw: 1200px; // max-width
 
-@import 'partials/_fonts';
 @import 'partials/_reset';
 @import 'partials/_mixins';
 @import 'partials/_base';
@@ -20,3 +19,4 @@ $mw: 1200px; // max-width
 @import 'partials/_home';
 @import 'partials/_header';
 @import 'partials/_footer';
+@import 'partials/_fonts';
