@@ -3,15 +3,23 @@
 */
 
 .site-footer {
-    margin-top:$su*7    ;
+    margin-top:$su*4;
     padding-top:$su*2;
     padding-bottom:$su*2;
     background-color:$dark-blue;
     color:white;
     @include ff-r;
 
+    @media (min-width:768px) {
+        margin-top: $su*7;
+    }
+
     .section-blocks {
-        margin-top:100px;
+        margin-top:$su*2;
+        
+        @media (min-width:768px) {
+            margin-top:$su*5;
+        }
     }
 
     .section-blocks--no-margin-top {
@@ -29,28 +37,84 @@
     &__action {
 
         a {
-            float:right;
+            @media (min-width:768px) {
+                float:right;
+            }
         }
     }
 
     &__credits {
-        margin-top:$su*5;
-        padding-top:$su*1.5;
+        margin-top:$su*3.5;
         border-top:1px solid #594490;
         font-size:1.2rem;
 
+        .section-blocks {
+            margin-top:$su*2;
+            flex-direction: column;
+        }
+
         .section-block {
+            margin-top:0;
             width:auto;
+            display:flex;
+        }
+
+        .copyright {
+            order:2;
+            margin-top:$su;
+        }
+
+        .address {
+            order:1;
+            margin-top:1em;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .span-block:first-of-type {
+                order:2;
+                margin-top:$su;
+            }
+
+            @media (min-width:480px) {
+                flex-direction: row;
+
+                .span-block:first-of-type {
+                    order:0;
+                    margin-top:0;
+                }
+            }
+        }
+
+        @media (min-width:768px) {
+            margin-top:$su*5;
+            padding-top:$su*1.5;
+
+            .section-blocks {
+                margin-top:$su;
+                flex-direction: row;
+            }
+
+            .address {
+                order:3;
+                margin-top:0;
+            }
+
+            .copyright {
+                margin-top:0;
+            }
         }
     }
 
     .span-block {
-        display:inline-block;
-        margin-left:1.5em;
-    }
+        display:block;
 
-    .text-link {
-        color:white;
-        border-bottom:1px solid white;
+        a {
+            margin-left:auto;
+
+            @media (min-width:480px) {
+                margin-left:1.5em;
+            }
+        }
     }
 }

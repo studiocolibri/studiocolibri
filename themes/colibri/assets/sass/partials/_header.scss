@@ -9,13 +9,6 @@
 }
 
 .site-title {
-    font-size:1.6rem; // ALLLEEZZZ !
-
-    &__first {
-        color:$dark-blue;
-    } 
-
-    &__second {
-        color:$light-blue;
-    } 
+    font-size:1.6rem;
+    color:$dark-blue;
 }

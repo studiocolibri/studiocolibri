@@ -48,6 +48,10 @@
 .homepage-intro {
     max-width:80vw;
 
+    .button {
+        margin-top:$su;
+    }
+
     @media (min-width:400px) {
         max-width:60vw;
     }

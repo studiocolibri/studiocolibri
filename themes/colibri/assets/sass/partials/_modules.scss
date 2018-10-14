@@ -32,13 +32,23 @@
     }
 
     &--padding-space{
-        padding-right:4em;
+        padding-right:1em;
+
+        @media (min-width:1024px) {
+            padding-right:4em;
+        }
     }
 
     &--flex-column {
         display: flex;
         flex-direction:column;
         justify-content: space-between;
+        margin-bottom:$su*2;
+        max-width:32em;
+
+        @media (min-width:768px) {
+            margin-bottom:0;
+        }
     }
 }
 
@@ -74,8 +84,9 @@
     border: 2px solid currentColor;
     border-radius: 2em;
     font-size:1.2rem;
-    margin: 1em 0;
-    transition:all 150ms ease-out;
+    margin:0;
+    line-height:1;
+    transition:all 130ms ease-out;
 
     &--color-pink {
         border:none;
@@ -84,16 +95,22 @@
     }
 
     &:hover, &:focus {
-        color:$pink;
+        background-color:$pink;
+        border-color:$pink;
+        color:white;
+
+        &--color-pink {
+            color:white;
+        }
     }
 }
 
-.button--color-pink:hover {
-    color:white;
-}
-
 .section-links {
-    margin-top:$su*1.5;
+    margin-top:$su;
+
+    @media (min-width:768px) {
+        margin-top:$su*1.5;
+    }
 }
 
 .text-link {
@@ -102,12 +119,21 @@
     display: inline-block;
     position: relative;
     @include ff-r;
-    transition: 150ms color ease-out;
+    transition: 130ms color ease-out;
     border-bottom:2px solid $dark-blue;
     padding-bottom:0.4em;
+
+    &--blue-background {
+        color:white;
+        border-bottom:1px solid white;
+    }
 
     &:hover, &:focus {
         color:$pink;
         border-color:$pink;
+    }
+
+    & + & {
+        margin-left:$su/2;
     }
 }
