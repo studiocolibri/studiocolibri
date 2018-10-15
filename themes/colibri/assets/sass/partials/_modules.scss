@@ -18,14 +18,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    &--we {
-        margin-top:$su*2;
+	&--we {
+        margin-top:$su*3;
     }
 }
 
 .section-block {
     width:100%;
-    margin-top:$su*2;
+    margin-top:$su*3;
 
     @media (min-width:768px) {
         width:calc(50% - #{$su * 3});
@@ -58,7 +58,8 @@
 
 .info-card {
     padding:2em;
-    background-color:$light-gray;
+    background-color:$ultra-light-gray;
+	border-radius: 4px;
 
     &--flex {
         display:flex;
@@ -70,8 +71,9 @@
         }
 
         .info-card__content {
-            margin-left:$su*2;
-            font-size:1.2rem;
+            margin-left:$su*1.5;
+            font-size:1rem;
+			line-height:1.6rem;
         }
     }
 }
@@ -88,6 +90,7 @@
     line-height:1;
     @include ff-r;
     transition:all 130ms ease-out;
+	background-color:transparent;
 
     &--color-pink {
         border:none;

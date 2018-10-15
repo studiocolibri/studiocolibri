@@ -12,9 +12,9 @@
 
 .colibri-img {
     position: absolute;
-    right: -9vw;
+    right: -14vw;
     width: 40%;
-    width: 65vw;
+    width: 75vw;
     min-width: 160px;
     top: -7vw;
     max-height:1200px;
@@ -122,10 +122,11 @@
 
 .topnametag {
     border: 1px solid $light-blue;
+	border-radius: 2px;
     @include ff-r;
     display: inline-block;
     padding:0.1em 0.6em;
-    font-size:0.75rem;
+    font-size:0.9rem;
     margin-bottom:$su/2;
     color:$light-blue;
 }

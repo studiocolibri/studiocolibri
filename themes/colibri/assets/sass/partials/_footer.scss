@@ -4,8 +4,8 @@
 
 .site-footer {
     margin-top:$su*4;
-    padding-top:$su*2;
-    padding-bottom:$su*2;
+    padding-top:$su*1.4;
+    padding-bottom:$su*1.4;
     background-color:$dark-blue;
     color:white;
     @include ff-r;
@@ -18,7 +18,7 @@
         margin-top:$su*2;
         
         @media (min-width:768px) {
-            margin-top:$su*5;
+            margin-top:$su*3;
         }
     }
 
