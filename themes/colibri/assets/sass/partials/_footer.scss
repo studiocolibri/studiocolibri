@@ -8,6 +8,8 @@
     padding-bottom:$su*1.4;
     background-color:$dark-blue;
     color:white;
+	position: relative;
+	overflow: hidden;
     @include ff-r;
 
     @media (min-width:768px) {
@@ -47,6 +49,7 @@
         margin-top:$su*3.5;
         border-top:1px solid #594490;
         font-size:1.2rem;
+		
 
         .section-blocks {
             margin-top:$su*2;
@@ -62,6 +65,7 @@
         .copyright {
             order:2;
             margin-top:$su;
+			z-index: 1;
         }
 
         .address {
@@ -117,4 +121,16 @@
             }
         }
     }
+}
+
+
+.feuilleswrapper {
+	width: 18vw;
+	position: absolute;
+	left: -10vw;
+	bottom: -5vw;
+	
+	@media (max-width:1100px) {
+                display: none;
+            }
 }
