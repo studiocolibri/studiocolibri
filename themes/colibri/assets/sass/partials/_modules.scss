@@ -63,6 +63,7 @@
 
     &--flex {
         display:flex;
+		margin-bottom: 1em;
 
         .info-card__capital {
             @include ff-r;
@@ -76,7 +77,11 @@
 			line-height:1.6rem;
         }
     }
+	
 }
+
+
+
 
 .button {
     display:inline-block;
