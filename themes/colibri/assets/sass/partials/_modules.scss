@@ -56,6 +56,14 @@
     margin-bottom:$su*2;
 }
 
+.infoperf {
+	color: #bbbabd;
+	font-weight: $bold;
+	@include ff-r;
+	margin-right: 0.8em;
+
+}
+
 .info-card {
     padding:2em;
     background-color:$ultra-light-gray;
