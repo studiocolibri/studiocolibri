@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="robots" content="index, follow">
     {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-	<link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
+    <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
     {{ partial "site-favicon.html" . }}
     {{- template "_internal/schema.html" . -}}
   </head>
