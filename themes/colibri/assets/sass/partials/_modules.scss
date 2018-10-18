@@ -56,19 +56,35 @@
     margin-bottom:$su*2;
 }
 
+.infoperf {
+	color: #bbbabd;
+	font-weight: $bold;
+	@include ff-r;
+	margin-right: 0.8em;
+
+}
+
 .info-card {
     padding:2em;
     background-color:$ultra-light-gray;
 	border-radius: 4px;
+	text-align: center;
+	font-size: 0.9rem;
+	font-weight: 400;
 
     &--flex {
         display:flex;
 		margin-bottom: 1em;
+<<<<<<< HEAD
+=======
+		justify-content: space-between;
+>>>>>>> staging
 
         .info-card__capital {
             @include ff-r;
             color:$green;
-            font-size:3rem;
+            font-size:2.2rem;
+		
         }
 
         .info-card__content {
