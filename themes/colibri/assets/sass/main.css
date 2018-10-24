@@ -216,7 +216,7 @@ p, ul {
   opacity: 0;
   max-height: 1200px;
   animation-name: anim-fullcolibri;
-  animation-duration: 1000ms;
+  animation-duration: 800ms;
   animation-delay: 500ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1); }
@@ -245,7 +245,13 @@ p, ul {
   margin-top: 80px; }
 
 .homepage-intro {
-  max-width: 80vw; }
+  max-width: 80vw;
+  opacity: 0;
+  animation-name: appeartitle2;
+  animation-duration: 1000ms;
+  animation-delay: 1600ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1); }
   .homepage-intro .button {
     margin-top: 20px; }
   @media (min-width: 400px) {
@@ -258,6 +264,11 @@ p, ul {
     .homepage-intro {
       max-width: 50%; } }
 
+@keyframes appeartitle2 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .homepage-content {
   margin-top: 100px; }
   @media (min-width: 768px) {
@@ -327,9 +338,31 @@ p, ul {
       padding-bottom: 40px; } }
 
 .site-title {
+  opacity: 0;
   font-size: 1.6rem;
-  color: #281168; }
+  color: #281168;
+  display: inline-block;
+  position: relative;
+  animation-name: appeartitle;
+  animation-duration: 1000ms;
+  animation-delay: 1200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+  /*	 &:before {
+          content: "";
+  		background-color: white;
+  		position: absolute;
+  
+  		top: 1em;
+  		 width: 100%;
+  		 	
+      }*/ }
 
+@keyframes appeartitle {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 /*
 * FOOTER
 */
