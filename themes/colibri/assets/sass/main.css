@@ -220,6 +220,9 @@ p, ul {
   animation-delay: 500ms;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1); }
+  @supports not (display: grid) {
+    .colibri-img {
+      width: 67vw; } }
   @media (min-width: 768px) {
     .colibri-img {
       top: -14vw; } }
@@ -270,11 +273,22 @@ p, ul {
   to {
     opacity: 1; } }
 .homepage-content {
-  margin-top: 100px; }
+  opacity: 0;
+  margin-top: 100px;
+  animation-name: appeartitle3;
+  animation-duration: 1000ms;
+  animation-delay: 2000ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1); }
   @media (min-width: 768px) {
     .homepage-content {
       margin-top: 200px; } }
 
+@keyframes appeartitle3 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .gray-block {
   display: block;
   width: 100%;
