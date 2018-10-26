@@ -4,7 +4,7 @@
 
 .colibri-wrapper {
     position: absolute;
-    top: 50px;
+    top: 20px;
     right: $su;
     z-index: -1;
     width: 100%;
@@ -99,6 +99,21 @@
     }
     to {
         opacity:1;
+    }
+}
+
+.page-header__description {
+	@include ff-r;
+	font-size: 1.2rem;
+    color: $dark-blue;
+    max-width: 220px;
+
+    @media (min-width:400px){
+        max-width:280px;
+    }
+
+    @media (min-width:768px){
+        max-width:80%;
     }
 }
 
