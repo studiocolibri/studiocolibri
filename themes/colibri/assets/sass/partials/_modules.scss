@@ -101,14 +101,18 @@
     text-decoration: none;
     padding: 0.8em 1.9em;
     color:$dark-blue;
-    border: 2px solid currentColor;
+    border: 1px solid currentColor;
     border-radius: 2em;
-    font-size:1.2rem;
+    font-size:1.1rem;
     margin:0;
     line-height:1;
     @include ff-r;
     transition:all 130ms ease-out;
-	background-color:transparent;
+    background-color:transparent;
+    
+    @media (min-width:400px) {
+        font-size: 1.2rem;
+    }
 
     &--color-pink {
         border:none;
