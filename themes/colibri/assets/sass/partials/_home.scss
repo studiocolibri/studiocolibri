@@ -4,7 +4,11 @@
 
 .colibri-wrapper {
     position: absolute;
+<<<<<<< HEAD
     top: 0px;
+=======
+    top: 20px;
+>>>>>>> origin/staging
     right: $su;
     z-index: -1;
     width: 100%;
@@ -55,7 +59,7 @@
 
 #animated-colibri {
     animation-name:anim-colibri;
-    animation-duration: 1000ms;
+    animation-duration: 800ms;
     animation-delay: 500ms;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.39,.58,.57,1);
@@ -70,8 +74,8 @@
     max-width:80vw;
 	opacity: 0;
 	animation-name:appeartitle2;
-    animation-duration: 1000ms;
-    animation-delay: 1600ms;
+    animation-duration: 800ms;
+    animation-delay: 1300ms;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.39,.58,.57,1);
 
@@ -101,10 +105,29 @@
     }
 }
 
+.page-header__description {
+	@include ff-r;
+	font-size: 1.2rem;
+    color: $dark-blue;
+    max-width: 220px;
+
+    @media (min-width:400px){
+        max-width:280px;
+    }
+
+    @media (min-width:768px){
+        max-width:90%;
+    }
+
+    @media (min-width:1240px){
+        font-size: 1.5rem;
+    }
+}
+
 .homepage-content {
 	opacity: 0;
 	margin-top:$su*5;
-	animation-name:appeartitle3;
+	animation-name:appear-content;
     animation-duration: 1000ms;
     animation-delay: 2000ms;
     animation-fill-mode: forwards;
@@ -116,7 +139,7 @@
     }
 }
 
-@keyframes appeartitle3 {
+@keyframes appear-content {
     from {
         opacity:0;
     }
