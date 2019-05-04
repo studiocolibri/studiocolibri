@@ -1,0 +1,23 @@
+{
+  "name": "studiocolibri",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiocolibri/studiocolibri.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studiocolibri/studiocolibri/issues"
+  },
+  "homepage": "https://github.com/studiocolibri/studiocolibri#readme",
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "postcss-cli": "^6.1.2"
+  }
+}
