@@ -21,3 +21,4 @@ command = "hugo"
 [context.production.environment]
 HUGO_VERSION = "0.51"
 HUGO_ENV = "production"
+RUBY_VERSION = "2.6.2"
