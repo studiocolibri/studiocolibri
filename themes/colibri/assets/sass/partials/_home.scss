@@ -200,3 +200,40 @@
     margin-bottom:$su/2;
     color:$light-blue;
 }
+
+.press-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:$su*2;
+
+    li {
+        display:block;
+        width:100%;
+        max-width:140px;
+        list-style:none;
+        padding:0 $su;
+
+        a {
+            transition:opacity 150ms ease-out;
+            opacity:1;
+
+            &:hover, &:focus {
+                opacity:0.6;
+            }
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        margin-top:$su*4;
+    }
+
+    @media screen and (min-width:1200px) {
+        justify-content:space-between;
+        margin-top:$su*6;
+
+        li {
+            padding:0;
+        }
+    }
+}
