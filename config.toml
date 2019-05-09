@@ -3,7 +3,6 @@ languageCode = "fr-be"
 title = "Studio Colibri"
 theme = "colibri"
 
-disableHugoGeneratorInject = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
