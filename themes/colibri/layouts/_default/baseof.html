@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
     {{ partial "site-favicon.html" . }}
     {{- template "_internal/schema.html" . -}}
+	<!--[if IE 11]>
+		<style>.colibri-img {height:72vw;}</style>
+	<![endif]-->
   </head>
 
   <body>
