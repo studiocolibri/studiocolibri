@@ -1,1 +1,25 @@
-https://github.com/studiocolibri/studiocolibri.git
+machine: 
+  node:
+    version: 8.16.0
+
+dependencies:
+  pre:
+    - cd /tmp
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.56.2/hugo_0.56.2_Linux-64bit.deb
+    - sudo dpkg -i hugo*.deb
+
+test:
+  override:
+    - echo "Tests are coming soon."
+
+deployment:
+  production:
+    commands:
+      - hugo -s ./site -b $HUGO_PRODUCTION_HOST -d ../public
+      - npm install
+      - tar -zcvf public-$CIRCLE_TAG.tar.gz public/
+      - scp public-$CIRCLE_TAG.tar.gz $DEPLOY_USER@$DEPLOY_PRODUCTION_HOST:$DEPLOY_PRODUCTION_PATH
+      - ssh -t $DEPLOY_USER@$DEPLOY_PRODUCTION_HOST "
+            cd $DEPLOY_PRODUCTION_PATH &&
+            rm -rf public/ &&
+            tar -xvzf public-$CIRCLE_TAG.tar.gz
