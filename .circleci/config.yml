@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - checkout
-      - run: ssh -p 21 ${DEPLOY_PRODUCTION_HOST}
+      - run: ssh -p 21 ${DEPLOY_USER}:'${DEPLOY_PASS}'@${DEPLOY_PRODUCTION_HOST}
       - run: lftp sftp://${DEPLOY_USER}:'${DEPLOY_PASS}'@${DEPLOY_PRODUCTION_HOST} -e "cd enprod; mirror -v -R --exclude .git/ --exclude .circleci/ --exclude node_modules ./ ./; quit"
 
 
