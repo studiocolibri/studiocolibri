@@ -1,25 +1,28 @@
-machine: 
-  node:
-    version: 8.16.0
 
-dependencies:
-  pre:
-    - cd /tmp
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.56.2/hugo_0.56.2_Linux-64bit.deb
-    - sudo dpkg -i hugo*.deb
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cibuilds/hugo:latest
 
-test:
-  override:
-    - echo "Tests are coming soon."
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
+    steps:
+      - run: apk update && apk add git && apk add lftp
+      - checkout
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - checkout
+      - run: ssh -p 21 enprod@exx1135.exxoss.net
+      - run: lftp sftp://${DEPLOY_USER}:'${DEPLOY_PASS}'@${DEPLOY_PRODUCTION_HOST} -e "cd enprod; mirror -v -R --exclude .git/ --exclude .circleci/ --exclude node_modules ./ ./; quit"
 
-deployment:
-  production:
-    commands:
-      - hugo -s ./site -b $HUGO_PRODUCTION_HOST -d ../public
-      - npm install
-      - tar -zcvf public-$CIRCLE_TAG.tar.gz public/
-      - scp public-$CIRCLE_TAG.tar.gz $DEPLOY_USER:$DEPLOY_PASS@$DEPLOY_PRODUCTION_HOST:$DEPLOY_PRODUCTION_PATH
-      - ssh -t $DEPLOY_USER@$DEPLOY_PRODUCTION_HOST "
-            cd $DEPLOY_PRODUCTION_PATH &&
-            rm -rf public/ &&
-            tar -xvzf public-$CIRCLE_TAG.tar.gz
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+- master
