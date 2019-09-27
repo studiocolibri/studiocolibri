@@ -70,31 +70,47 @@
 	border-radius: 4px;
 	text-align: center;
 	font-size: 0.9rem;
-	font-weight: 400;
+    font-weight: 400;
+    max-width: 490px;
+
+    @media screen and (min-width:768px) {
+        font-size: 0.7rem;
+    }
+
+    @media screen and (min-width:960px) {
+        font-size: 0.9rem;
+    }
 
     &--flex {
         display:flex;
 		margin-bottom: 1em;
 		justify-content: space-between;
-
-        .info-card__capital {
-            @include ff-r;
-            color:$green;
-            font-size:2.2rem;
-		
-        }
-
-        .info-card__content {
-            margin-left:$su*1.5;
-            font-size:1rem;
-			line-height:1.6rem;
-        }
     }
-	
 }
 
+.info-card__capital {
+    @include ff-r;
+    color:$green;
+    font-size:1.6rem;
 
+    @media screen and (min-width:420px) {
+        font-size: 2rem;
+    }
 
+    @media screen and (min-width:768px) {
+        font-size: 1.4rem;
+    }
+
+    @media screen and (min-width:960px) {
+        font-size: 2rem;
+    }
+}
+
+.info-card__content {
+    margin-left:$su*1.5;
+    font-size:1rem;
+    line-height:1.6rem;
+}
 
 .button {
     display:inline-block;
