@@ -1,0 +1,33 @@
+---
+new_page_extension: md
+auto_deploy: true
+admin_path: 
+webhook_url: 
+sections:
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+upload_dir: static/images
+public_path: "/images"
+front_matter_path: ''
+use_front_matter_path: true
+file_template: ":filename:"
+instant_preview: 
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.55.6
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+  publish_command: hugo
+  publish_env:
+  - HUGO_ENV=production
+  - HUGO_VERSION=0.55.6
+  output_directory: public
+  preview_command: hugo -E -F -D -b $DEPLOY_URL -d public
+version: 0.55.6
