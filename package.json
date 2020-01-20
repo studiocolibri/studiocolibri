@@ -10,7 +10,9 @@
   ],
   "postcss": {
     "plugins": {
-      "autoprefixer": { "browsers":  "last 20 versions" }
+      "autoprefixer": {
+        "browsers": "last 20 versions"
+      }
     }
   },
   "scripts": {
