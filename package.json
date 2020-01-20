@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/studiocolibri/studiocolibri#readme",
   "dependencies": {
-    "autoprefixer": "^9.5.1",
-    "postcss-cli": "^6.1.2"
+    "autoprefixer": "^9.7.4",
+    "postcss-cli": "^6.1.3"
   }
 }
