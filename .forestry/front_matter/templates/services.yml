@@ -21,3 +21,5 @@ fields:
   config:
     required: false
   label: emoji
+pages:
+- content/services/eco-conception.md
