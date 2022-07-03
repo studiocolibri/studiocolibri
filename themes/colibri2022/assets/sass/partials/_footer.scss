@@ -10,7 +10,6 @@
     color:white;
 	position: relative;
 	overflow: hidden;
-    @include ff-r;
 
     @media (min-width:768px) {
         margin-top: $su*5;
