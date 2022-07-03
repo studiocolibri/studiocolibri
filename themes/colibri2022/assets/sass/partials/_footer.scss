@@ -1,0 +1,144 @@
+/*
+* FOOTER
+*/
+
+.site-footer {
+    margin-top:$su*4;
+    padding-top:$su*1.4;
+    padding-bottom:$su*1.4;
+    background-color:$dark-blue;
+    color:white;
+	position: relative;
+	overflow: hidden;
+    @include ff-r;
+
+    @media (min-width:768px) {
+        margin-top: $su*5;
+    }
+
+    @media (min-width:1200px) {
+        margin-top: $su*7;
+    }
+
+    .section-blocks {
+        margin-top:$su*2;
+        
+        @media (min-width:768px) {
+            margin-top:$su*3;
+        }
+    }
+
+    .section-blocks--no-margin-top {
+        margin-top:0;
+
+        .section-block {
+            margin-top:0;
+        }
+    } 
+
+    h1 {
+        color:white;
+    }
+
+    &__action {
+
+        a {
+            @media (min-width:768px) {
+                float:right;
+            }
+        }
+    }
+
+    &__credits {
+        margin-top:$su*3.5;
+        border-top:1px solid #594490;
+        font-size:1.2rem;
+		
+
+        .section-blocks {
+            margin-top:$su*2;
+            flex-direction: column;
+        }
+
+        .section-block {
+            margin-top:0;
+            width:auto;
+            display:flex;
+        }
+
+        .copyright {
+            order:2;
+            margin-top:$su;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        .address {
+            order:1;
+            margin-top:1em;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .span-block:first-of-type {
+                order:2;
+                margin-top:$su;
+            }
+
+            @media (min-width:480px) {
+
+                .span-block:first-of-type {
+                    order:0;
+                    margin-top:0;
+                }
+            }
+        }
+
+        @media (min-width:768px) {
+            margin-top:$su*5;
+            padding-top:$su*1.5;
+
+            .section-blocks {
+                margin-top:$su;
+                flex-direction: row;
+            }
+
+            .address {
+                order:3;
+                margin-top:0;
+            }
+
+            .copyright {
+                margin-top:0;
+            }
+        }
+    }
+
+    .span-block {
+        display:block;
+        margin-bottom:1em;
+
+        a {
+            margin-left:0.25em;
+        }
+    }
+}
+
+
+.feuilleswrapper {
+	width: 18vw;
+	position: absolute;
+	left: -10vw;
+	bottom: -5vw;
+	
+	@media (max-width:1100px) {
+                display: none;
+            }
+}
+
+.green-web-img {
+    display: block;
+    margin:$su 0 0 0;
+    width: 100%;
+    max-width: 180px;
+}

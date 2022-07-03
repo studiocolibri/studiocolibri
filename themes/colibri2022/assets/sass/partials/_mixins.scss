@@ -1,0 +1,20 @@
+/*
+* MIXINS
+*/
+
+@mixin max-width($length:$mw) {
+    width:100%;
+    margin: 0 auto;
+    padding-right:$su;
+    padding-left:$su;
+    max-width:$length;
+    /* @if $length {
+        max-width: $length;
+    } @else {
+        max-width: $mw;
+    } */
+} 
+
+@mixin ff-r {
+    font-family: 'BW-Gradual-Regular',sans-serif;
+}

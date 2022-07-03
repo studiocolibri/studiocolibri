@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <article class="single">
+        <header class="page-header block-mw">
+            <h1>{{.Title}}</h1>
+        </header>
+        <section class="page-wrapper block-mw">
+            {{.Content}}
+            <p style="margin-top:60px">
+                <a class="button" href="{{ "/post" }}">Retour</a>
+            </p>
+        </section>
+    </article>
+{{ end }}

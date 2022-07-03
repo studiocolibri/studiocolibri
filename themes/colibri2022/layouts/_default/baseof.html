@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+  <!-- Testing branch -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <!--    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>-->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+	  <title>Studio Colibri | L'Agence Web Durable</title>
+    <meta name="description" content='Utiliser des technologies modernes pour construire un web plus rapide, plus sécurisé et plus écologique.'>
+    <meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.studiocolibri.be" />
+    <meta property="og:title" content="Studio Colibri | L'Agence Web Durable">
+    <meta property="og:image" content="https://www.studiocolibri.be/images/graphcolibri.jpg">
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:description" content='Utiliser des technologies modernes pour construire un web plus rapide, plus sécurisé et plus écologique.'>
+    <meta property="og:site_name" content="Studio Colibri">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="robots" content="index, follow">
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
+    {{ partial "site-favicon.html" . }}
+    {{- template "_internal/schema.html" . -}}
+	<!--[if IE]>
+		<style type="text/css">.colibri-img {height:72vw;}</style>
+	<![endif]-->
+  </head>
+
+  <body>
+    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+    <main role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+    {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+  </body>
+</html>

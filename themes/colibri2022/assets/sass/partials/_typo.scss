@@ -1,0 +1,28 @@
+h1, h2, h3 {
+    @include ff-r;
+    color:$dark-blue;
+    margin-bottom:0.25em;
+    line-height:1.6;
+}
+
+h1 {
+    font-size:2.2rem;
+    margin-bottom:0.5em;
+}
+
+h2 {
+    font-size:1.8rem;
+}
+
+h3 {
+    font-size:1.4rem;
+}
+
+p, ul {
+    margin-bottom:0.25em;
+    line-height:1.6;
+}
+
+.color--light-blue {
+    color:$light-blue;
+}

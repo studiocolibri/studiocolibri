@@ -1,0 +1,50 @@
+/*
+* HEADER
+*/
+
+.site-header {
+    @include max-width;
+    padding-top:$su*3;
+    padding-bottom:$su*3;
+	
+	@media (max-width:500px) {
+        padding-top:$su*1.5;
+    	padding-bottom:$su*2;
+    }
+}
+
+.site-title {
+    opacity: 0;
+	font-size:1.6rem;
+    color:$dark-blue;
+	display: inline-block;
+	position: relative;
+	animation-name:appeartitle;
+    animation-duration: 600ms;
+    animation-delay: 800ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.39,.58,.57,1);
+
+	
+	
+/*	 &:before {
+        content: "";
+		background-color: white;
+		position: absolute;
+
+		top: 1em;
+		 width: 100%;
+		 	
+    }*/
+}
+
+@keyframes appeartitle {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+

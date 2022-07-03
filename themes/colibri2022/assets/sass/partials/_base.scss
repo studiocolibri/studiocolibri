@@ -1,0 +1,21 @@
+/*
+* BASE
+*/
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";    
+	font-size:14px;
+    font-weight:200;
+    position:relative;
+    color:$text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (min-width:400px) {
+        font-size:16px;
+    }
+
+    @media (min-width:768px) {
+        font-size:18px;
+    }
+}

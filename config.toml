@@ -1,6 +1,6 @@
 baseURL = "https://www.studiocolibri.be/"
 languageCode = "fr-be"
 title = "Studio Colibri"
-theme = "colibri"
+theme = "colibri2022"
 
 disableKinds = ["taxonomy", "taxonomyTerm", "sitemap", "RSS"]

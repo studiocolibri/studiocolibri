@@ -1,0 +1,22 @@
+$dark-blue : #281168;
+$light-blue : rgb(112, 212, 240);
+$pink : #fd576a;
+$green: #58de53;
+$light-gray:#f3f4f3;
+$ultra-light-gray:#f5f4f9;
+$text-color:#716b89;
+$bold: 500;
+
+$su: 20px; // spacing-unit
+
+$mw: 1140px; // max-width
+
+@import 'partials/_reset';
+@import 'partials/_mixins';
+@import 'partials/_base';
+@import 'partials/_typo';
+@import 'partials/_modules';
+@import 'partials/_home';
+@import 'partials/_header';
+@import 'partials/_footer';
+@import 'partials/_fonts';
