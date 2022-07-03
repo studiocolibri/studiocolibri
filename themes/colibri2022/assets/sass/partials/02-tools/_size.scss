@@ -1,0 +1,10 @@
+/**
+ * Size
+ * Usage:
+   @include size(300px,200px);
+ */
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

@@ -1,0 +1,18 @@
+/**
+ * Line Clamp
+ * Usage:
+   @include line-clamp( 4 , 16px * 1.5 );
+ */
+
+@mixin line-clamp($lines, $line-height) {
+  max-height: $lines * $line-height;
+  overflow: hidden;
+
+  @supports (-webkit-line-clamp: $lines) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    text-overflow: ellipsis;
+  }
+
+}

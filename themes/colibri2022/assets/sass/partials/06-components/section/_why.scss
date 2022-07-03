@@ -1,0 +1,83 @@
+.why {
+
+  padding: 50px 0 0;
+
+  &__main {
+    @include wrap;
+  }
+
+  &__head {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    
+  }
+
+  &__list {
+
+    @include mq($from: tablet) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &-item {
+      margin-top: 50px;
+      @include mq($from: tablet) {
+        width: 460px;
+        margin-top: 75px;
+
+        &:nth-child(3) {
+          margin-left: 150px;
+        }
+      }
+    }
+
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+
+}
+
+.why-item {
+
+  &__title {
+    font-size: 4rem;
+    margin-bottom: 10px;
+
+    @include mq($until: desktop) {
+      font-size: 3rem;
+    }
+
+    .why__list-item:nth-child(1) & {
+      color: $color-tertiary;
+    }
+
+    .why__list-item:nth-child(2) & {
+      color: $color-secondary;
+    }
+
+    .why__list-item:nth-child(3) & {
+      color: #8599B8;
+    }
+
+    .why__list-item:nth-child(4) & {
+      color: $color-secondary;
+    }
+
+  }
+
+  p {
+    max-width: 400px;
+    margin-bottom: 0;
+
+    small {
+      vertical-align: top;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+}

@@ -1,0 +1,43 @@
+.carousel {
+
+  padding-bottom: rem(135px);
+
+  @include mq($until: tablet) {
+    padding-bottom: rem(75px);
+  }
+
+  &__main {
+    @include wrap;
+  }
+
+  &__head {
+    margin-bottom: 75px;
+
+    @include mq($until: tablet) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__title {
+    br {
+      @include mq($until: tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+
+    margin-left: -15px;
+
+    &-item {
+      height: 100%;
+    }
+
+  }
+
+  &__button {
+    margin-top: 60px;
+  }
+
+}

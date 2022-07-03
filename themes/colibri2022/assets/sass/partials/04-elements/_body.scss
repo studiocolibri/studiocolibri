@@ -1,0 +1,25 @@
+/**
+ * Body
+ */
+
+body {
+  font-family: $font-primary;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: 100;
+  color: $body-color;
+  background-color: $body-background;
+  //background: linear-gradient(-45deg, #04023a 0%, $color-primary 100%);
+  //background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  @include mq($until: tablet) {
+    font-size: 18px;
+  }
+
+  &.loading {
+    overflow: hidden;
+  }
+}

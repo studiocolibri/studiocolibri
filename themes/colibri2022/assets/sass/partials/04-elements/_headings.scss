@@ -1,0 +1,76 @@
+/**
+ * Headings
+ */
+
+$h1-font-size: $base-font-size * 3 !default;
+$h2-font-size: $base-font-size * 2.5 !default;
+$h3-font-size: $base-font-size * 2 !default;
+$h4-font-size: $base-font-size * 1.5 !default;
+$h5-font-size: $base-font-size * 1 !default;
+$h6-font-size: $base-font-size !default;
+
+$headings-sm: .7 !default;
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  margin: $heading-magin;
+}
+
+h1,
+.h1 {
+  font-size: $h1-font-size;
+}
+h2,
+.h2 {
+  font-size: $h2-font-size;
+}
+h3,
+.h3 {
+  font-size: $h3-font-size;
+}
+h4,
+.h4 {
+  font-size: $h4-font-size;
+}
+h5,
+.h5 {
+  font-size: $h5-font-size;
+}
+h6,
+.h6 {
+  font-size: $h6-font-size;
+}
+
+@include mq($until: desktop) {
+  h1,
+  .h1 {
+    font-size: $h1-font-size * $headings-sm;
+  }
+  h2,
+  .h3 {
+    font-size: $h2-font-size * $headings-sm;
+  }
+  h3,
+  .h3 {
+    font-size: $h3-font-size * $headings-sm;
+  }
+  h4,
+  .h4 {
+    font-size: $h4-font-size * $headings-sm;
+  }
+  h5,
+  .h5 {
+    font-size: $h5-font-size * $headings-sm;
+  }
+  h6,
+  .h6 {
+    font-size: $h6-font-size * $headings-sm;
+  }
+}

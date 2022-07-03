@@ -1,0 +1,24 @@
+.services {
+
+  &__main {
+    @include wrap;
+  }
+
+  &__head {
+    max-width: 640px;
+    margin-bottom: 100px;
+  }
+
+  &__list {
+
+    margin-left: 250px;
+
+    &-item {
+      border-top: 1px solid white;
+    }
+
+    border-bottom: 1px solid white;
+
+  }
+
+}

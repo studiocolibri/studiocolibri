@@ -1,0 +1,120 @@
+.webcheck {
+
+  position: relative;
+  text-align: center;
+  padding-bottom: 0;
+
+  &:before {
+    content: "";
+    @include absolute(0,0,null,0);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1888.09 23'%3E%3Cpath d='M1888.09,3c-17.77,0-26.43,4.77-35.59,9.81S1834,23,1815.46,23s-27.94-5.18-37-10.19S1760.61,3,1742.84,3s-26.43,4.77-35.59,9.81S1688.76,23,1670.22,23s-28-5.18-37-10.19S1615.36,3,1597.6,3s-26.43,4.77-35.59,9.81S1543.52,23,1525,23s-28-5.18-37-10.19S1470.12,3,1452.35,3s-26.42,4.77-35.58,9.81-18.5,10.19-37,10.19-27.94-5.18-37-10.19S1324.88,3,1307.11,3s-26.42,4.77-35.58,9.81S1253,23,1234.49,23s-27.94-5.18-37-10.19S1179.64,3,1161.88,3s-26.43,4.77-35.59,9.81S1107.8,23,1089.26,23s-27.94-5.18-37-10.19S1034.41,3,1016.65,3s-26.43,4.77-35.59,9.81S962.57,23,944,23s-27.94-5.18-37-10.19S889.18,3,871.41,3,845,7.77,835.82,12.81,817.33,23,798.79,23s-27.94-5.18-37-10.19S743.94,3,726.17,3s-26.42,4.77-35.58,9.81S672.09,23,653.55,23s-27.94-5.18-37-10.19S598.7,3,580.94,3s-26.43,4.77-35.59,9.81S526.86,23,508.32,23s-27.94-5.18-37-10.19S453.47,3,435.7,3s-26.42,4.77-35.58,9.81S381.62,23,363.08,23s-27.94-5.18-37-10.19S308.23,3,290.47,3,264,7.77,254.88,12.81,236.39,23,217.85,23s-27.94-5.18-37-10.19S163,3,145.23,3s-26.42,4.77-35.58,9.81S91.16,23,72.62,23s-27.94-5.18-37-10.19S17.77,3,0,3V0C18.54,0,27.94,5.18,37,10.19S54.85,20,72.62,20,99,15.23,108.2,10.19,126.69,0,145.23,0s27.94,5.18,37,10.19S200.08,20,217.85,20s26.42-4.77,35.58-9.81S271.93,0,290.47,0s27.94,5.18,37,10.19S345.31,20,363.08,20s26.43-4.77,35.59-9.81S417.16,0,435.7,0s27.94,5.18,37,10.19S490.55,20,508.32,20s26.42-4.77,35.58-9.81S562.4,0,580.94,0s27.94,5.18,37,10.19S635.78,20,653.55,20s26.43-4.77,35.59-9.81S707.63,0,726.17,0s27.94,5.18,37,10.19S781,20,798.79,20s26.42-4.77,35.59-9.81S852.87,0,871.41,0s27.94,5.18,37,10.19S926.26,20,944,20s26.42-4.77,35.58-9.81S998.11,0,1016.65,0s27.94,5.18,37,10.19S1071.49,20,1089.26,20s26.42-4.77,35.58-9.81S1143.34,0,1161.88,0s27.94,5.18,37,10.19S1216.72,20,1234.49,20s26.43-4.77,35.59-9.81S1288.57,0,1307.11,0s27.94,5.18,37,10.19S1362,20,1379.73,20s26.43-4.77,35.59-9.81S1433.81,0,1452.35,0s28,5.18,37,10.19S1507.2,20,1525,20s26.42-4.77,35.58-9.81S1579.06,0,1597.6,0s27.94,5.18,37,10.19S1652.45,20,1670.22,20s26.42-4.77,35.58-9.81S1724.3,0,1742.84,0s27.94,5.18,37,10.19S1797.69,20,1815.46,20s26.43-4.77,35.59-9.81S1869.55,0,1888.09,0Z' style='fill:%233240fe'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: 1440px;
+    height: 18px;
+    animation: slideleft 500s infinite linear;
+  }
+
+  &__main {
+    @include wrap(980px);
+  }
+
+  &__head {
+    margin-bottom: 50px;
+  }
+
+  &__form {
+
+    form {
+      position: relative;
+      width: 100%;
+      max-width: 980px;
+      margin: auto;
+
+      @include placeholder(rgba(white,.3));
+    }
+
+    input {
+      border: 0;
+      border-radius: 35px;
+      width: 100%;
+      height: 70px;
+      border: 2px solid $color-secondary;
+      background-color: rgba($color-secondary,.1);
+      padding: 20px 270px 20px 35px;
+      color: white;
+      flex: 1;
+      outline: none;
+
+      @include mq($until: tablet) {
+        border-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding: 20px 35px;
+        text-align: center;
+      }
+    }
+
+    button {
+      @include mq($from: tablet) {
+        @include absolute(5px,5px,5px,null);
+      }
+      @include mq($until: tablet) {
+        padding: 25px;
+        width: 100%;
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+      color: black;
+      border: 0;
+      border-radius: 5px;
+      padding: 0 50px;
+      background-color: $color-secondary;
+      border-radius: 35px;
+      color: white;
+      cursor: pointer;
+      @include basic-transition(background, .25s, null, $ease-out-quad);
+
+      @include on-event {
+        background-color: rgba($color-secondary,.7);
+        .icon {
+          transform: translateX(5px);
+        }
+      }
+
+      .icon {
+        fill: white;
+        margin-left: 15px;
+        @include basic-transition(transform, .25s, null, $ease-out-quart);
+      }
+    }
+
+    .result {
+      p {
+        margin-top: 40px;
+        padding: 30px 20px 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(black,.2);
+        color: white;
+        margin-bottom: 0;
+
+        strong {
+          font-weight: 400;
+          font-size: 1.75em;
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        &.success {
+          background-color: $color-success;
+        }
+
+        &.warning {
+          background-color: $color-warning;
+        }
+      }
+    }
+  }
+
+}

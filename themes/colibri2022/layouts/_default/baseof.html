@@ -28,17 +28,14 @@
   </head>
   <body>
 	{{ block "header" .}}
-	<a href="/" style="text-decoration: none;"><h1>{{ $.Site.Title }}</h1></a>
-	{{ if .IsHome }}
-	<p>{{ $.Site.Params.Description | safeHTML}}</p>
+  {{ partial "site-header.html" .}}
 {{ end }}    
-	<p>{{.Params.Intro}}</p>
-	{{end}}
     {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
     {{ end }}
 	{{ block "footer" .}}
   {{ partial "site-footer.html"}}
+  {{ partial "site-scripts"}}
 {{end}}
   </body>
 </html>

@@ -1,0 +1,49 @@
+/**
+ * Link Hover Anim
+ * Usage:
+ * @include link-hover-anim(red);
+ */
+
+@mixin link-hover-anim($color: $color-tertiary, $height: 3px) {
+
+  position: relative;
+
+  &:before {
+    content: "";
+    @include absolute(null,null,0,0);
+    height: $height;
+    background-color: $color;
+
+    width: 100%;
+    transform-origin: right center;
+    transform: scaleX(0);
+    transition: transform .3s $ease-in-out-quint;
+
+    [data-scroll-direction="up"] & {
+      transform-origin: left center;
+    }
+  }
+
+  @include on-event {
+    text-decoration: none;
+
+    &:before {
+      transition-delay: 0s;
+      transform-origin: left center;
+      transform: scaleX(1);
+    }
+  }
+
+  &.is-active {
+    
+    &:before {
+      transform-origin: left center;
+      transform: scaleX(1);
+
+      [data-scroll-direction="up"] & {
+        transform-origin: right center;
+      }
+    }
+  }
+
+}

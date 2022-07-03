@@ -1,0 +1,20 @@
+/**
+ * Wrapper
+ * Usage:
+ * @include wrap(1200px,20px);
+ */
+@mixin wrap($max-width:$default-wrap,$gutter:$default-gutter) {
+  
+  position: relative;
+  max-width: $max-width;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @media (max-width: ($max-width+($gutter*2))) {
+    margin-left: $gutter;
+    margin-right: $gutter;
+    width: auto;
+  }
+
+}

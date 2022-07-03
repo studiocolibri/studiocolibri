@@ -1,0 +1,62 @@
+/**
+ * Header Navigation
+ */
+
+@include mq($from: tablet) {
+
+  .header-navigation {
+
+    .btn {
+      margin-left: 25px;
+    }
+
+    & > nav > ul {
+      
+      @include list-reset;
+      display: inline-flex;
+      vertical-align: top;
+
+      @include mq($until: desktop) {
+        font-size: .9em;
+      }
+
+      & > li {
+        position: relative;
+        margin: 0 20px;
+
+        & > a {
+          display: inline-block;
+          text-align: center;
+          padding: 15px 0;
+          text-decoration: none;
+          color: white;
+
+          @include on-event {
+            color: rgba(white,.7);
+          }
+          
+        }
+        
+        &:not(.button) > a {
+          @include link-hover-anim(white,2px);
+        }
+        
+        &:hover > a {
+          color: rgba(white,.7);
+        }
+        
+        &:hover > a,
+        &.current-menu-item > a {
+          &:before {
+            transform-origin: left center;
+            transform: scaleX(1);
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}

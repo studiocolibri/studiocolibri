@@ -30,6 +30,7 @@
   "homepage": "https://github.com/studiocolibri/studiocolibri#readme",
   "dependencies": {
     "autoprefixer": "^9.7.4",
+    "import-glob-loader": "^1.1.0",
     "postcss-cli": "^10.0.0"
   }
 }

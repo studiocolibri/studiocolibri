@@ -1,0 +1,15 @@
+/**
+ * Paragraph
+ */
+
+p {
+  margin: $default-margin;
+
+  @include mq($until: tablet) {
+    margin-bottom: 25px;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+}

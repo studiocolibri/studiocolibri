@@ -1,0 +1,73 @@
+.accordeon {
+
+  position: relative;
+  @include basic-transition(background, .25s, null, $ease-out-quad);
+
+  &__head {
+
+  }
+
+  &__title {
+    margin: 0;
+    padding: 50px 0;
+    line-height: 1;
+    font-size: 32px;
+  }
+
+  &__content {
+    
+  }
+
+  &__text {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    @include basic-transition((max-height,opacity), .5s, null, $ease-in-out-quart);
+
+    .is-open & {
+      opacity: 1;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+      padding-bottom: 50px;
+    }
+
+  }
+
+  &__button {
+    @include overlay;
+  }
+
+  &__btn {
+    @include overlay;
+    @include reset-button-style;
+
+    span {
+      @include absolute(45px,0,null,null);
+      @include size(44px);
+      display: block;
+      &:before {
+        content: "";
+        @include absolute(calc(50% - 10px),null,null,calc(50% - 1.5px));
+        @include size(3px,20px);
+        background-color: white;
+        @include basic-transition(transform, .5s, null, $ease-in-out-quart);
+        .is-open & {
+          transform: rotate(90deg) !important;
+        }
+      }
+      &:after {
+        content: "";
+        @include absolute(calc(50% - 1.5px),null,null,calc(50% - 10px));
+        @include size(20px,3px);
+        background-color: white;
+        @include basic-transition(transform, .5s, null, $ease-in-out-quart);
+        .is-open & {
+          transform: rotate(-180deg) !important;
+        }
+      }
+    }
+  }
+
+}

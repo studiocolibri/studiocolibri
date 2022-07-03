@@ -1,0 +1,96 @@
+.card {
+
+  position: relative;
+  height: 100%;
+  perspective: 1000px;
+
+  &__content {
+    height: 100%;
+    transition: transform .5s $ease-in-out-quart;
+    transform-style: preserve-3d;
+
+    .is-flipped & {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__front,
+  &__back {
+    height: 100%;
+    padding: 60px 30px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.5;
+    backface-visibility: hidden;
+
+    p {
+      margin: 0;
+    }
+
+    .slick-slide:nth-child(3n+1) &,
+    .Equipements & {
+      background-color: $color-secondary;
+    }
+
+    .slick-slide:nth-child(3n+2) &,
+    .Usages & {
+      background-color: $color-tertiary;
+    }
+
+    .slick-slide:nth-child(3n+3) &,
+    .Professionnels & {
+      background-color: $color-secondary;
+    }
+
+  }
+
+  &__front {
+    p {
+      hyphens: auto;
+    }
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    @include overlay;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__icon {
+    font-size: 5rem;
+  }
+
+  &__info {
+    @include reset-button-style;
+    @include absolute(30px,30px,null,null);
+    @include size(32px);
+    z-index: 0;
+
+    .icon {
+      @include overlay;
+      @include size(100%);
+      fill: white;
+      transition: 0s .25s visibility;
+
+      &.info-circle {
+        visibility: visible;
+        .is-flipped & {
+          visibility: hidden;
+        }
+      }
+
+      &.times-circle {
+        visibility: hidden;
+        .is-flipped & {
+          visibility: visible;
+        }
+      }
+
+    }
+  }
+
+}

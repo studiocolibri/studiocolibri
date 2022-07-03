@@ -1,0 +1,62 @@
+.loader {
+  @include fixed(0,0,0,0);
+  background-color: $color-primary;
+  z-index: 2;
+
+  opacity: 0;
+  visibility: hidden;
+  @include basic-transition(opacity, .25s, null, $ease-out-quad);
+  transition: .25s opacity $ease-out-quad, 0s .25s visibility;
+
+  .loading & {
+    opacity: 1;
+    visibility: visible;
+    @include basic-transition(opacity, .25s, null, $ease-out-quad);
+  }
+}
+
+.spinner {
+  @include size(300px,50px);
+  @include overlay;
+  margin: auto;
+  text-align: center;
+  
+  .ball {
+    @include size(20px);
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    animation: motion 3s $ease-in-out-quart infinite;
+  }
+    
+  p {
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    small {
+      font-size: 14px;
+      text-transform: none;
+    }
+  }
+
+}
+
+@keyframes motion {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}

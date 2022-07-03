@@ -1,0 +1,26 @@
+/**
+ * On event
+ * @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+ * Usage:
+ * @include on-event {
+ *   color: rebeccapurple;
+ * }
+ */
+
+@mixin on-event($self: false) {
+  @if $self {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    body:not(.is-touch-device) & {
+      &:hover,
+      &:active,
+      &:focus {
+        @content;
+      }
+    }
+  }
+}

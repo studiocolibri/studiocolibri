@@ -1,0 +1,41 @@
+/**
+ * Site
+ */
+
+/*
+ .site {
+
+  &:before,
+  &:after {
+    content: "";
+    z-index: 10000;
+    @include fixed(0,0,0,0);
+    background: $color-primary;
+  }
+
+  &:after {
+    transition: opacity .5s $ease-out-quart, 0s visibility .5s $ease-in-quart;
+    .is-loaded & {
+      opacity: 0;
+      visibility: hidden;
+      //transform: translateY(-100%);
+    }
+  }
+
+  &:before {
+    transition: opacity .5s $ease-in-quart;
+    //transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    .is-unloaded & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+*/
+
+.site {
+  overflow: hidden;
+}

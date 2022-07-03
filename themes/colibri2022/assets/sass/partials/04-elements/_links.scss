@@ -1,0 +1,14 @@
+/**
+ * Links
+ */
+
+a {
+
+  color: $color-link;
+  @include basic-transition(color,.2s,null,$ease-out-quad);
+  
+  @include on-event {
+    color: rgba($color-link,.7);
+  }
+
+}

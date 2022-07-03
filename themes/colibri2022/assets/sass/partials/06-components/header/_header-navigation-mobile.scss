@@ -1,0 +1,83 @@
+/**
+ * Header Navigation Mobile
+ */
+
+@include mq($until: tablet) {
+
+  .header-navigation {
+
+    @include fixed(0,0,0,0);
+    z-index: 100;
+    text-align: center;
+    background-color: $color-primary;
+    transform: translateX(100%);
+
+    transition: .5s transform $ease-in-out-quart;
+
+    .open-menu & {
+      transform: translateX(0);
+    }
+
+    & > nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0 auto;
+      max-width: 280px;
+      transform: translateY(75px);
+      opacity: 0;
+      transition: opacity 0s .4s $ease-out-quad, transform 0s .4s $ease-out-quart;
+
+      .open-menu & {
+        transform: translateY(0);
+        opacity: 1;
+        transition: opacity .4s .7s $ease-out-quad, transform .4s .7s $ease-out-quart;
+      }
+    }
+
+    & > nav > ul {
+
+      @include list-reset;
+      padding: 20px 0;
+
+      & > li {
+
+        transform: translateY(75px);
+        opacity: 0;
+        transition: opacity 0s .4s $ease-out-quad, transform 0s .4s $ease-out-quart;
+
+        .open-menu & {
+          transform: translateY(0);
+          opacity: 1;
+          transition: opacity .4s $ease-out-quad, transform .4s $ease-out-quart;
+
+          @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+              transition-delay: ($i + 10) * 0.05s;
+            }
+          }
+
+        }
+
+        & > a {
+          display: inline-block;
+          position: relative;
+          font-family: $font-secondary;
+          padding: 20px 0;
+          color: white;
+          text-decoration: none;
+          text-align: center;
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,41 @@
+/**
+ * Header
+ */
+
+.header {
+
+  @include fixed(0,0,null,0);
+  z-index: 2;
+
+  &.is-small {
+    background-color: rgba($color-primary,.95);
+    box-shadow: 0 0 30px rgba(black,.2);
+  }
+
+  &__main {
+    @include wrap;
+    padding: 55px 0;
+    display: flex;
+    justify-content: space-between;
+    @include basic-transition(padding, .3s, null, $ease-out-quad);
+
+    @include mq($until: desktop) {
+      padding: 40px 0;
+    }
+
+    .is-small & {
+      padding: 10px 0;
+    }
+  }
+
+  &__logo {
+    position: relative;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

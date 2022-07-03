@@ -1,0 +1,171 @@
+.article {
+
+  padding-top: 250px;
+  padding-bottom: 135px;
+
+  @include mq($until: mobile) {
+    padding-top: 150px;
+    padding-bottom: 90px;
+  }
+
+  &__main {
+    @include wrap;
+  }
+
+  &__content {
+    &-inner {
+      @include mq($from: desktop) {
+        margin-left: 150px;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 60px;
+    strong {
+      font-weight: 400;
+      color: $color-tertiary;
+    }
+  }
+
+  &__text {
+    @include mq($from: tablet) {
+      columns: 2;
+      column-gap: 100px;
+    }
+
+    a {
+      text-decoration: none;
+      border-bottom: 2px solid white;
+      @include basic-transition((color,border), .25s, null, $ease-out-quad);
+
+      @include on-event {
+        border-color: rgba(white,.7);
+      }
+    }
+
+    strong {
+      color: $color-tertiary;
+    }
+
+    ul {
+      li {
+        list-style: none;
+        position: relative;
+        &:before {
+          content: "";
+          @include absolute(6px,null,null,-35px);
+          @include size(20px);
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 256'%3E%3Cpath fill='%23FFAF00' d='M311,3.5l-7.1,7.1c-4.7,4.7-4.7,12.3,0,17l83.9,83.4H12c-6.6,0-12,5.4-12,12v10c0,6.6,5.4,12,12,12h375.9L304,228.4 c-4.7,4.7-4.7,12.3,0,17l7.1,7.1c4.7,4.7,12.3,4.7,17,0l116.5-116c4.7-4.7,4.7-12.3,0-17L328,3.5C323.3-1.2,315.7-1.2,311,3.5z'/%3E%3C/svg%3E");
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  &__intro {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+
+  &__tabs {
+    margin-top: 80px;
+    border-bottom: 5px solid $color-secondary;
+
+    @include mq($until: phablet) {
+      border-bottom: 1px solid $color-secondary;
+      margin-top: 40px;
+    }
+
+    &-item {
+      @include reset-button-style;
+      padding: 15px 20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border: 1px solid $color-secondary;
+      border-bottom: 0;
+      @include basic-transition(background, .25s, null, $ease-out-quart);
+
+      @include mq($until: phablet) {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+        border-radius: 0;
+      }
+
+      &.is-active-tab {
+        background-color: $color-secondary;
+      }
+    }
+  }
+
+  &__list {
+    padding: 20px 0;
+    @include mq($from: phablet) {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    @include mq($from: desktop) {
+      padding: 20px;
+    }
+
+    &-item {
+      padding: 10px 0;
+      @include mq($from: phablet) {
+        width: 50%;
+        padding: 15px;
+      }
+      @include mq($from: desktop) {
+        width: 33.3333%;
+      }
+
+      display: none;
+
+      .article[data-current="Tous"] &,
+      .article:not([data-current]) & {
+        display: block;
+      }
+
+      &.Usages {
+        .article[data-current="Usages"] & {
+          display: block;
+        }
+      }
+
+      &.Equipements {
+        .article[data-current="Equipements"] & {
+          display: block;
+        }
+      }
+
+      &.Professionnels {
+        .article[data-current="Professionnels"] & {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__link {
+    margin: 60px 0 0;
+    font-size: 1.75em;
+    text-align: center;
+
+    a {
+      color: $color-tertiary;
+      text-decoration: none;
+      border-bottom: 2px solid $color-tertiary;
+      @include basic-transition((color,border), .25s, null, $ease-out-quad);
+
+      @include on-event {
+        color: rgba($color-tertiary,.7);
+        border-color: rgba($color-tertiary,.7);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+/**
+ * Text selection
+ */
+
+::selection {
+  background: white;
+  color: $color-primary;
+}
+
+::-moz-selection {
+  background: white;
+  color: $color-primary;
+}

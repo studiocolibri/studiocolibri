@@ -1,0 +1,21 @@
+/**
+ * margin-left: 0; pour :first-child 
+ * margin-right: 0; pour :last-child
+ */
+
+@mixin margin-first-last($direction:horizontal) {
+  &:first-child {
+    @if $direction == horizontal {
+      margin-left: 0;
+    } @else if $direction == vertical {
+      margin-top: 0;
+    }
+  }
+  &:last-child {
+    @if $direction == horizontal {
+      margin-right: 0;
+    } @else if $direction == vertical {
+      margin-bottom: 0;
+    }
+  }
+}

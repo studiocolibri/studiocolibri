@@ -1,0 +1,29 @@
+/**
+ * Colors
+ */
+
+$color-primary:     #251264;
+$color-secondary:   #EE798B;
+$color-tertiary:    #77B9E4;
+
+$color-text:        white;
+$color-light:       #f9f9f9;
+$color-gray:        #b7b7b7;
+$color-border:      #e1e1e1;
+$color-link:        $color-text;
+$color-title:       $color-tertiary;
+
+$red:               $color-secondary;
+
+$color-danger:      $red;
+$color-success:     #2FAF14;
+$color-warning:    $color-secondary;
+$color-info:        blue;
+
+$body-color:        $color-text;
+$body-background:   $color-primary;
+
+$button-color:      white;
+$button-background: $color-secondary;
+
+$heading-color:     white;

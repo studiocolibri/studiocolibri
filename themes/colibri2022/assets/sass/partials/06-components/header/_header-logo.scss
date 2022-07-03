@@ -1,0 +1,20 @@
+/**
+ * Header Logo
+ */
+
+.logo {
+  display: block;
+  position: relative;
+
+  img {
+    height: 80px;
+
+    @include mq($until: desktop) {
+      height: 70px;
+    }
+
+    @include mq($until: tablet) {
+      height: 60px;
+    }
+  }
+}

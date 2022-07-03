@@ -1,22 +1,36 @@
-$dark-blue : #281168;
-$light-blue : rgb(112, 212, 240);
-$pink : #fd576a;
-$green: #58de53;
-$light-gray:#f3f4f3;
-$ultra-light-gray:#f5f4f9;
-$text-color:#716b89;
-$bold: 500;
+/**
+ * ITCSS structure
+ * Original post by Harry Roberts https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528
+ */
 
-$su: 20px; // spacing-unit
+/**
+ * This is where all of the stylesheets are compiled.
+ * They are processed in the order they are imported
+ * to ensure the consistent increase of specificity.
+ *
+ *    ITCSS Methodology: Inverted Triangle CSS
+ *
+ *    **************   1. Settings
+ *     ************    2. Tools
+ *      **********     3. Generic
+ *       ********      4. Elements
+ *        ******       5. Objects
+ *         ****        6. Components
+ *          **         7. Utilities
+ *
+ * 1. Settings.........Global configuration and variables.
+ * 2. Tools............Functions and mixins.
+ * 3. Generic..........Ground zero styles.
+ *                     (normalizing.css, box-sizing etc...)
+ * 4. Elements.........Unclassed (bare) HTML element
+ *                     (like H1, Ul, A etc...)
+ * 5. Objects..........Common non-cosmetic structural design patterns.
+ *                     e.g containers, rows, grids, colums etc...
+ * 6. Components.......Specific cosmetic elements of UI.
+ *                     e.g. buttons, forms, header, footer etc...
+ * 7. Utilities........Helpers and overrides.
+ *
+ *    Shame............All the CSS, hacks and things we are not proud of.
+ */
 
-$mw: 1140px; // max-width
-
-@import 'partials/_reset';
-@import 'partials/_mixins';
-@import 'partials/_base';
-@import 'partials/_typo';
-@import 'partials/_modules';
-@import 'partials/_home';
-@import 'partials/_header';
-@import 'partials/_footer';
-@import 'partials/_fonts';
+@import 'partials/temp';

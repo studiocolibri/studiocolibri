@@ -1,0 +1,35 @@
+/**
+ * Lists
+ */
+
+ol,
+ul,
+dl {
+  margin: $default-margin;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+li {
+  margin-bottom: rem(5px);
+  > ul,
+  > ol {
+    margin-bottom: 0;
+    margin-left: rem(20px);
+    margin-top: rem(5px);
+  }
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: rem(20px);
+  margin-left: rem(20px);
+}

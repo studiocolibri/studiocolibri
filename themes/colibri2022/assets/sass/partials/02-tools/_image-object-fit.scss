@@ -1,0 +1,15 @@
+/**
+ * Image object fit
+ * Usage:
+   @include aspect-ratio(16,9);
+ */
+
+@mixin img-object-fit($fit:cover,$position:center) {
+  
+  img {
+    @include overlay;
+    @include size(100%);
+    object-fit: $fit;
+    object-position: $position;
+  }
+}

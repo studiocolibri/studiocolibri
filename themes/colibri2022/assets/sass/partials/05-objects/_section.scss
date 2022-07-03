@@ -1,0 +1,11 @@
+/**
+ * Section
+ */
+
+section {
+  padding: rem(150px) 0;
+
+  @include mq($until: tablet) {
+    padding: rem(100px) 0;
+  }
+}

@@ -1,0 +1,213 @@
+.result {
+
+  position: relative;
+  margin-top: 100px;
+  padding-bottom: 135px;
+
+  @include mq($until: tablet) {
+    margin-top: 50px;
+  }
+
+  &__main {
+    @include wrap;
+  }
+
+  &__head {
+    margin-bottom: 50px;
+    @include mq($from: tablet) {
+      display: flex;
+      margin-bottom: 100px;
+    }
+    &-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__percent {
+    position: relative;
+    @include size(340px);
+    margin-right: 50px;
+
+    @include mq($until: tablet) {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+
+    @include mq($until: mobile) {
+      @include size(260px);
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__circle {
+
+    fill: currentColor;
+    transform-origin: center;
+    @include overlay;
+    text-transform: uppercase;
+    animation: rotateCircle 10s infinite linear;
+
+    &-number {
+      @include absolute(50%,null,null,50%);
+      transform: translate(-50%,-50%);
+      font-size: 4em;
+      margin: 0;
+
+      .is-success & {
+        color: $color-success;
+      }
+
+      .is-warning & {
+        color: $color-warning;
+      }
+
+      small {
+        font-size: .5em;
+      }
+    }
+
+  }
+
+  &__title {
+    font-size: 2.25em;
+    text-transform: none;
+
+    @include mq($until: tablet) {
+      font-size: 1.75em;
+    }
+
+    strong {
+      font-weight: 400;
+
+      .is-success & {
+        color: $color-success;
+      }
+
+      .is-warning & {
+        color: $color-warning;
+      }
+    }
+
+    a {
+      color: $color-tertiary;
+      text-decoration: none;
+      border-bottom: 3px solid $color-tertiary;
+      @include basic-transition((color,border), .25s, null, $ease-out-quad);
+
+      @include on-event {
+        color: rgba($color-tertiary,.7);
+        border-color: rgba($color-tertiary,.7);
+      }
+    }
+
+    span {
+      color: $color-tertiary;
+    }
+
+  }
+
+  &__text {
+    margin: 0;
+
+    strong {
+      font-weight: 400;
+
+      &.is-success {
+        border-bottom: 5px solid $color-success;
+      }
+
+      &.is-warning {
+        border-bottom: 5px solid $color-warning;
+      }
+    }
+  }
+
+  &__content {
+    opacity: 1;
+    @include basic-transition(opacity, 1s, null, $ease-out-quad);
+    &.is-hidden {
+      opacity: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.75em;
+    margin-bottom: 60px;
+
+    strong  {
+      font-weight: 400;
+      color: $color-success;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1060px;
+    margin: auto;
+
+    &-item {
+      width: 33.3333%;
+      padding: 30px;
+
+      display: flex;
+      flex-direction: column;
+
+      @include mq($until: desktop) {
+        width: 50%;
+        padding: 15px;
+      }
+
+      @include mq($until: tablet) {
+        width: 100%;
+        padding: 15px 0;
+      }
+    }
+  }
+
+  &__link {
+    margin: 60px 0 0;
+    font-size: 1.75em;
+    text-align: center;
+
+    a {
+      color: $color-tertiary;
+      text-decoration: none;
+      border-bottom: 2px solid $color-tertiary;
+      @include basic-transition((color,border), .25s, null, $ease-out-quad);
+
+      @include on-event {
+        color: rgba($color-tertiary,.7);
+        border-color: rgba($color-tertiary,.7);
+      }
+    }
+  }
+
+}
+
+.result-item {
+
+  background-color: black;
+  padding: 60px 30px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 1.5;
+  height: 100%;
+
+  .result__list-item:nth-child(3n+1) & { background-color: $color-secondary; }
+  .result__list-item:nth-child(3n+2) & { background-color: $color-tertiary; }
+  .result__list-item:nth-child(3n+3) & { background-color: $color-secondary; }
+
+  &__icon {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+}

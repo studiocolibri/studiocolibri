@@ -1,0 +1,45 @@
+/**
+ * Buttons
+ */
+
+input.btn,
+button.btn {
+  @include reset-button-style;
+}
+
+@mixin btn {
+  display: inline-block;
+  //@include link-hover-anim(white,1px);
+  padding: 15px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  @include basic-transition((background,color), .25s, null, $ease-out-quad);
+
+  .icon {
+    fill: $color-tertiary;
+    margin-left: 5px;
+    @include basic-transition(transform, .25s, null, $ease-out-quart);
+  }
+
+  @include on-event {
+    .icon {
+      transform: translateX(10px);
+    }
+  }
+}
+
+input.btn,
+button.btn,
+.btn {
+  @include btn;
+
+  &-secondary {
+    background-color: $color-secondary;
+    padding: 15px 30px;
+
+    @include on-event {
+      color: white;
+      background-color: rgba($color-secondary,.7);
+    }
+  }
+}

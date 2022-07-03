@@ -1,0 +1,37 @@
+.footer {
+
+  padding: rem(100px) 0;
+  text-align: center;
+
+  &__main {
+    @include wrap;
+  }
+
+  p {
+    &.hat {
+      margin-top: 75px;
+    }
+  }
+
+  ul {
+    @include list-reset;
+    @include mq($from: tablet) {
+      display: flex;
+      justify-content: center;
+    }
+    margin-top: 20px;
+    li {
+      background-color: white;
+      margin: 10px;
+      color: $color-primary;
+      padding: 30px 50px;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      @include mq($until: tablet) {
+        margin: 10px 0;
+      }
+    }
+  }
+
+}
