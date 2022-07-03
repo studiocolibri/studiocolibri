@@ -5,12 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/services
-  label: Services
+  path: content
+  label: Pages
   create: all
-  match: "**/*"
-  templates:
-  - services
+  match: "*"
 - type: directory
   path: content/team
   label: Team
@@ -19,10 +17,12 @@ sections:
   templates:
   - team-members
 - type: directory
-  path: content
-  label: Pages
+  path: content/services
+  label: Services
   create: all
-  match: "*"
+  match: "**/*"
+  templates:
+  - services
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
