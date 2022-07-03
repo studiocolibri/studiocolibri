@@ -28,7 +28,6 @@
         <p class="hat">
           Notre vision
         </p>
-        {{ range where .Site.RegularPages "Section" "team" }}test{{end}}
            
 
         <h2 class="why__title">
@@ -121,28 +120,19 @@
 
         <div class="about__columns-right">
           <div class="about__text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo, eget auctor leo
-              facilisis a.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo, eget auctor leo
-              facilisis a.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo, eget auctor leo
-              facilisis a.</p>
+           {{ range where .Site.Pages "Section" "team"}}
+           <h4>{{.Params.name}}</h4>
+            <p>{{.Params.bio}}</p>
+              {{end}}
           </div>
+          
         </div>
 
       </div>
 
     </div>
 
-    <svg id="text-container" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
-      <path id="text-curve" d="M0 100s269.931 86.612 520 0c250.069-86.612 480 0 480 0" fill="none" />
-
-      <text y="40" font-size="50">
-        <textPath id="text-path" href="#text-curve" startOffset="200">
-          * Keyframers really know animation.
-        </textPath>
-      </text>
-    </svg>
+{{partial "wave.html" .}}
 
   </section>
   <section class="cases">
@@ -260,22 +250,18 @@
       </div>
 
       <div class="services__list">
-
+        {{ range where .Site.RegularPages "Section" "services" }}
         <div class="services__list-item">
           <div class="accordeon js-accordeon">
-
             <div class="accordeon__head">
               <h3 class="accordeon__title">
-                Eco-Conception
+                <span>{{.Params.emoji}} </span>{{.Params.nom}}
               </h3>
             </div>
-
             <div class="accordeon__content">
 
               <div class="accordeon__text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo, eget auctor leo
-                  facilisis a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo,
-                  eget auctor leo facilisis a.</p>
+                <p>{{.Params.description}}</p>
               </div>
 
             </div>
@@ -288,87 +274,9 @@
 
           </div>
         </div>
-        <div class="services__list-item">
-          <div class="accordeon js-accordeon">
-
-            <div class="accordeon__head">
-              <h3 class="accordeon__title">
-                Stratégie marketing
-              </h3>
-            </div>
-
-            <div class="accordeon__content">
-
-              <div class="accordeon__text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo, eget auctor leo
-                  facilisis a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo,
-                  eget auctor leo facilisis a.</p>
-              </div>
-
-            </div>
-
-            <div class="accordeon__button">
-              <button class="accordeon__btn js-accordeon-button">
-                <span></span>
-              </button>
-            </div>
+        {{end}}
 
           </div>
-        </div>
-        <div class="services__list-item">
-          <div class="accordeon js-accordeon">
-
-            <div class="accordeon__head">
-              <h3 class="accordeon__title">
-                SEO & Référencement
-              </h3>
-            </div>
-
-            <div class="accordeon__content">
-
-              <div class="accordeon__text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo, eget auctor leo
-                  facilisis a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo,
-                  eget auctor leo facilisis a.</p>
-              </div>
-
-            </div>
-
-            <div class="accordeon__button">
-              <button class="accordeon__btn js-accordeon-button">
-                <span></span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-        <div class="services__list-item">
-          <div class="accordeon js-accordeon">
-
-            <div class="accordeon__head">
-              <h3 class="accordeon__title">
-                ...
-              </h3>
-            </div>
-
-            <div class="accordeon__content">
-
-              <div class="accordeon__text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo, eget auctor leo
-                  facilisis a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis pretium leo,
-                  eget auctor leo facilisis a.</p>
-              </div>
-
-            </div>
-
-            <div class="accordeon__button">
-              <button class="accordeon__btn js-accordeon-button">
-                <span></span>
-              </button>
-            </div>
-
-          </div>
-        </div>
 
       </div>
 
@@ -380,8 +288,4 @@
   </section>
 </div>
 
-<footer class="footer">
-
-</footer>
-</div>
 {{ end }}
