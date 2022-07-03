@@ -8,5 +8,4 @@ social = "Instagram"
 [[links]]
 link = "#"
 social = "LinkedIn"
-
 +++
