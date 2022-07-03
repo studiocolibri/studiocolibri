@@ -1,6 +1,5 @@
 baseURL = "/"
 languageCode = "fr-be"
 title = "Studio Colibri"
-theme = "colibri2022"
 [params]
     description = "Utiliser des"
