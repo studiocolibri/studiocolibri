@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="Studio Colibri">
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="robots" content="index, follow">
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
     {{ partial "site-favicon.html" . }}
 	<!--[if IE]>
