@@ -1,4 +1,23 @@
 ---
 label: Services
 hide_body: false
-fields: []
+fields:
+- name: nom
+  type: text
+  config:
+    required: false
+  label: Nom
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+- name: emoji
+  type: text
+  config:
+    required: false
+  label: emoji
