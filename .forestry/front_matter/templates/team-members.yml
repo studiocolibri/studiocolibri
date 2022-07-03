@@ -1,4 +1,41 @@
 ---
 label: Team Members
 hide_body: false
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: false
+  label: Name
+- name: job
+  type: text
+  config:
+    required: false
+  label: Job
+- name: bio
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Bio
+- name: links
+  type: field_group_list
+  fields:
+  - name: link
+    type: text
+    config:
+      required: false
+    label: link
+  - name: social
+    type: text
+    config:
+      required: false
+    label: social
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links
