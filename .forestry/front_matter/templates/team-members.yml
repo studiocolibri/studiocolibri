@@ -39,3 +39,5 @@ fields:
     max: 
     labelField: 
   label: Links
+pages:
+- content/team/anthony.md
