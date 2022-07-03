@@ -3,6 +3,9 @@ bio = "Diplômé en Publicité, Designer & Formateur Web à l'IHECS. Anthony se 
 job = "Stratégie & Design"
 name = "Anthony"
 [[links]]
+link = "#"
+social = "LinkedIn"
+[[links]]
 link = "instagram.com/anthobarbarich"
 social = "Instagram"
 
