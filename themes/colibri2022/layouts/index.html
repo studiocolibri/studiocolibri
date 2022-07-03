@@ -9,14 +9,14 @@
         <h1 class="hero__title">
           Utiliser des <strong class='wave'>technologies modernes</strong> <br />pour <span class='star'>✱</span>
           construire un web <br />plus <strong>léger</strong>, <strong>performant</strong> et <strong
-            class='border'>inclusif</strong>
+            class='border'>inclusif</strong> 
         </h1>
-
+       
       </div>
 
     </div>
 
-{{ partial "rotate-circle.html"}}
+{{ partial "rotate-circle.html" }}
 
   </section>
   <section id="pourquoi" class="why">
@@ -28,6 +28,8 @@
         <p class="hat">
           Notre vision
         </p>
+        {{ range where .Site.RegularPages "Section" "team" }}test{{end}}
+           
 
         <h2 class="why__title">
           L’approche Colibri
@@ -375,57 +377,10 @@
   </section>
   <section id="tester-mon-site" class="webcheck">
 
-    <div class="webcheck__main">
-
-      <div class="webcheck__head">
-
-        <p class="hat">
-          Tester mon site
-        </p>
-
-        <h2 class="webcheck__title">
-          et concrètement, <br />quel impact a mon site web ?
-        </h2>
-
-      </div>
-
-      <div class="webcheck__form">
-
-        <form action="result.html" method="GET">
-
-          <input type="text" name="site" id="site" placeholder="URL du site à tester" />
-          <button type="submit">
-            Calculer
-            <svg class="icon long-arrow-right">
-              <use xlink:href="./assets/img/sprite.svg#long-arrow-right"></use>
-            </svg> </button>
-
-        </form>
-
-      </div>
-
-    </div>
-
   </section>
 </div>
 
 <footer class="footer">
-
-  <div class="footer__main">
-
-    <p>Ce site web est une initiative de l'agence <a href='https://www.studiocolibri.be' target='_blank'
-        rel='noopener'>Studio Colibri</a></p>
-
-    <p class="hat">Avec le soutien de</p>
-
-    <ul>
-      <li>Partenaire 1</li>
-      <li>Partenaire 2</li>
-      <li>Partenaire 3</li>
-      <li>...</li>
-    </ul>
-
-  </div>
 
 </footer>
 </div>
