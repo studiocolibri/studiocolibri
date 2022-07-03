@@ -1,0 +1,7 @@
+{{ define "main"}}
+{{ range .Pages }}
+<li>
+{{.Params.name}}
+</li>
+{{ end }}
+{{end}}
