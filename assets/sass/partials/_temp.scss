@@ -1199,7 +1199,7 @@ section {
 }
 
 .about svg text {
-	fill: #ff9800
+	fill: $pink;
 }
 
 .about__columns {
@@ -1953,7 +1953,7 @@ body:not(.is-touch-device) .hero__button:focus {
 }
 
 .hero__button .icon {
-	fill: #77b9e4;
+	fill: $pink;
 	width: 80px;
 	height: 80px;
 	position: absolute;

@@ -948,7 +948,7 @@ section {
   padding-top: 80px; }
 
 .about svg text {
-  fill: #ff9800; }
+  fill: #ee798b; }
 
 .about__columns {
   display: -webkit-box;
@@ -1547,7 +1547,7 @@ body:not(.is-touch-device) .hero__button:focus {
   color: #fff !important; }
 
 .hero__button .icon {
-  fill: #77b9e4;
+  fill: #ee798b;
   width: 80px;
   height: 80px;
   position: absolute;
