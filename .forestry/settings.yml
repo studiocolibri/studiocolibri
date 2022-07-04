@@ -4,6 +4,13 @@ auto_deploy: true
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: content/projects
+  label: Projets
+  create: all
+  match: "**/*"
+  templates:
+  - projet
 - type: document
   path: content/_index.md
   label: Homepage
