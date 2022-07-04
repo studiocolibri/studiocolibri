@@ -1660,7 +1660,7 @@ body:not(.is-touch-device) .article__link a:focus {
 	display: inline-block;
 	margin-left: 2vw;
 	font-size: 4vw;
-	color: #77b9e4;
+	color: $pink;
 	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg)
 }
